@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">latihan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ke_menu_satu">Ke Menu Satu</string>
+    <string name="ke_menu_dua">ke menu dua</string>
+    <string name="pemesanan_makanan">Pemesanan Makanan</string>
+    <string name="kue">Kue</string>
+    <string name="kurang">-</string>
+</resources>

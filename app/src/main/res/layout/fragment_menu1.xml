@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu1Fragment">
+
+    <TextView
+        android:id="@+id/tv_pemesananMakanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pemesanan_makanan"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <TextView
+        android:id="@+id/tv_kue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pemesananMakanan"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_pemesananMakanan"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pemesananMakanan"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <Button
+        android:id="@+id/bt_kurang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kurang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_kue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_kue"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kue"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/tv_nilai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_kurang"
+        app:layout_constraintEnd_toStartOf="@+id/bt_tambah"
+        app:layout_constraintStart_toEndOf="@+id/bt_kurang"
+        app:layout_constraintTop_toTopOf="@+id/bt_kurang" />
+
+    <Button
+        android:id="@+id/bt_tambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_nilai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_nilai"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <TextView
+        android:id="@+id/tv_pilihTopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Topping"
+        app:layout_constraintEnd_toEndOf="@+id/bt_tambah"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bt_kurang"
+        app:layout_constraintTop_toBottomOf="@+id/bt_kurang" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="208dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pilihRasa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_pilihRasa"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pilihRasa">
+
+        <RadioButton
+            android:id="@+id/rb_coklat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coklat" />
+
+        <RadioButton
+            android:id="@+id/rb_strawberry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strawberry" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cb_iceCream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="IceCream"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pilihTopping"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_pilihTopping"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pilihTopping" />
+
+    <CheckBox
+        android:id="@+id/cb_Ceres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:text="Ceres"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_iceCream"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pilihTopping"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toEndOf="@+id/cb_iceCream"
+        app:layout_constraintTop_toTopOf="@+id/cb_iceCream"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_pilihRasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Rasa"
+        app:layout_constraintEnd_toEndOf="@+id/cb_Ceres"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cb_iceCream"
+        app:layout_constraintTop_toBottomOf="@+id/cb_iceCream" />
+
+    <EditText
+        android:id="@+id/edit_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Nama Pembeli"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/b_beli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Beli"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nama"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_nama"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nama" />
+
+    <Button
+        android:id="@+id/b_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="@+id/b_beli"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nama"
+        app:layout_constraintTop_toTopOf="@+id/b_beli" />
+
+    <TextView
+        android:id="@+id/tv_struk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Struk Pembelian"
+        app:layout_constraintEnd_toEndOf="@+id/b_reset"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="@+id/b_beli"
+        app:layout_constraintTop_toBottomOf="@+id/b_beli" />
+
+    <TextView
+        android:id="@+id/tv_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="nama"
+        app:layout_constraintEnd_toEndOf="@+id/tv_struk"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_struk"
+        app:layout_constraintTop_toBottomOf="@+id/tv_struk" />
+
+    <TextView
+        android:id="@+id/tv_rasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="rasa"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nama"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_nama"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+
+    <TextView
+        android:id="@+id/tv_totalHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="harga"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_rasa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_rasa"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rasa"
+        app:layout_constraintVertical_bias="0.305" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
